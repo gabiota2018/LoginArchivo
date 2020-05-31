@@ -20,6 +20,7 @@ public class ViewModelMain extends AndroidViewModel {
         super(application);
         context=application.getApplicationContext();
     }
+
     public void buscarUsuario(String mailBuscado,String passwordBuscado){
         if(mailBuscado.equals("") || passwordBuscado.equals(""))
             Toast.makeText(context, "Complete los datos", Toast.LENGTH_LONG).show();
@@ -50,7 +51,6 @@ public class ViewModelMain extends AndroidViewModel {
     }
 
     public void registrar(){
-        Toast.makeText(context, "llama al viewModel", Toast.LENGTH_LONG).show();
         Intent i = new Intent(context, RegistroActivity.class);
         i.putExtra("correo","vacio");
         context.startActivity(i);
